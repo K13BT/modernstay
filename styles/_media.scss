@@ -1,0 +1,228 @@
+
+@media (min-width: 1075px) {
+    header {
+        padding: 25px;
+
+        nav {
+            font-size: 25px;
+        }
+
+        button {
+            font-size: 20px;
+        }
+    }
+
+    .hero {
+        .hero_content {      
+            width: 60%;
+            align-items: center;
+            padding: 40px 60px;
+            row-gap: 40px;
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .facilities {
+        padding: 50px;
+        
+        .facilities_list {
+            column-gap: 60px;
+        }
+
+        .fac_card {
+            margin-bottom: 60px;
+
+            a {
+                font-size: 25px;
+            }
+        }
+    }
+
+    footer {
+        padding: 70px 50px;
+
+        .socials i {
+            font-size: 30px;
+        }
+
+        .copyright {
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 25px;
+        }
+
+        nav {
+            row-gap: 20px;
+            column-gap: 30px;
+        }
+    }
+
+    .amenities {
+        margin: 60px auto;
+    }
+
+    .amenities_list {
+        row-gap: 60px;
+    }
+
+}
+
+
+@media (max-width: 875px) {
+    header {
+        nav {
+            display: none;
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+    .hero {
+        .hero_content {
+            h1 {
+                font-size: 30px;
+            }
+
+            padding: 20px;
+            row-gap: 15px;
+        }
+    }
+
+    .hamburger {
+        display: grid;
+        background-color: #000;
+
+        span {
+            border-bottom: 4px solid #fff;
+            width: 35px;
+            margin-bottom: 8px;
+            border-radius: 2px;
+        }
+    }
+
+    .hamClick {
+        display: grid;
+        background-color: #000;
+
+        span {
+            border-bottom: 4px solid #fff;
+            width: 35px;
+            position: relative;
+            border-radius: 2px;
+        }
+
+        span:nth-child(2) {
+            display: none;          
+        }
+
+        span:first-child {
+            transform: rotate(135deg);
+            position: absolute;
+            right: 20px;
+        }
+
+        span:last-child {
+            transform: rotate(-135deg);
+            position: absolute;
+            right: 20px;
+        }
+    }
+
+    header {
+        position: relative;
+    }
+
+    .media_nav {
+        display: grid;
+        position: absolute;
+        color: #fff;
+        background-color: #000;
+        z-index: 2;
+        top: 100px;
+        padding: 25px;
+        row-gap: 15px;
+        font-size: 25px;
+        border-radius: 5px;
+        justify-items: center;
+        width: 95%;
+        
+        a:hover {
+            border-bottom: none;
+            padding: 0;
+        }
+    }
+
+    footer {
+        padding: 30px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+
+        nav {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        button {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+@media (max-width: 575px) {
+    .hero_content {
+        top: 100%;
+        opacity: 1;
+        z-index: 3;
+
+        button {
+            justify-self: flex-end;
+        }
+    }
+
+    .amenities {
+        margin: 75px auto;
+    }
+
+    .hero {
+        margin-bottom: 400px;
+    }
+
+    .amenities h1 {
+        text-align: center;
+    }
+
+    .amenities_list {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px;
+    }
+
+    .facilities {
+        margin: 75px auto;
+
+        .facilities_list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+      
+        .fac_header {
+            display: block;
+            text-align: center;
+        }
+    }
+}
