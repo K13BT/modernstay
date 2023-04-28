@@ -198,6 +198,7 @@
 
     .amenities {
         margin: 75px auto;
+        margin-bottom: 20px;
     }
 
     .hero {
@@ -210,11 +211,20 @@
 
     .amenities_list {
         grid-template-columns: repeat(1, 1fr);
-        row-gap: 30px;
+        row-gap: 40px;
+
+        .am_card {
+            i {
+                width: 60px;
+                height: 60px;
+                padding: 10px;
+            }
+        }
     }
 
     .facilities {
         margin: 75px auto;
+        margin-top: 0;
 
         .facilities_list {
             grid-template-columns: repeat(1, 1fr);

@@ -72,6 +72,37 @@ header {
 }
 
 
+// Hero 
+.hero {
+    position: relative;
+
+    .img_container img {
+        width: 100%;
+    }
+
+    .hero_content {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        background-color: #000;
+        opacity: 0.8;
+        padding: 30px;
+        display: grid;
+        row-gap: 20px;
+        justify-items: flex-start;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            color: #bbb;
+        }
+    }  
+}
+
+
 // Amenities
 .amenities {
     padding: 100px 40px;
@@ -92,22 +123,30 @@ header {
 
 .am_card {
     display: grid;
-    row-gap: 15px;
+    grid-template-rows: repeat(3, 1fr);
     justify-items: center;
+    align-items: center;
+    
 
     h4 {
         font-size: 20px;
+        grid-row: 2 / 3;
     }
 
     p {
         line-height: 1.5;
+        grid-row:  3 / 4;
+        text-align: center;
     }
-    
 
     i {
+        grid-row: 1 / 2;
         font-size: 2rem;
-        background: linear-gradient(#000, #fff, #000);
+        background: #fff;
+        box-shadow: inset 0 0 20px 5px #000;
+        width: 80px;
         padding: 20px;
+        height: 80px;
         color: #000;
         border-radius: 50%;
     }
@@ -136,6 +175,12 @@ header {
     cursor: pointer;
     transition: border-bottom 0.8s;
     color: #fff;
+
+    i {
+        margin-left: 1rem;
+        color: #ccc;
+        font-size: 25px;
+    }
 }
 
 .fac_header:hover { 
@@ -174,37 +219,6 @@ header {
     img {
         filter: blur(1.5px);
         transform: scale(1.02);
-    }
-}
-
-
-// Hero 
-.hero {
-    position: relative;
-
-    img {
-        width: 100%;
-    }
-
-    .hero_content {
-        position: absolute;
-        bottom: 0;
-        z-index: 1;
-        width: 100%;
-        background-color: #000;
-        opacity: 0.8;
-        padding: 30px;
-        display: grid;
-        row-gap: 20px;
-        justify-items: flex-start;
-
-        h1 {
-            font-size: 40px;
-        }
-
-        p {
-            color: #bbb;
-        }
     }
 }
 
@@ -259,7 +273,6 @@ footer {
         display: block;
     }
 }
-
 
 
 @import 'media';
